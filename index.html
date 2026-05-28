@@ -1744,7 +1744,7 @@ async function testClaude(){
         "anthropic-version":"2023-06-01",
         "anthropic-dangerous-direct-browser-access":"true"
       },
-      body:JSON.stringify({model:"claude-3-5-sonnet-20241022",max_tokens:10,messages:[{role:"user",content:"Zeg OK"}]})
+      body:JSON.stringify({model:"claude-haiku-4-5-20251001",max_tokens:10,messages:[{role:"user",content:"Zeg OK"}]})
     });
     var d = await res.json();
     if(res.ok){ st.className="st-ok"; st.textContent="\u2713 Verbinding OK! Claude werkt."; }
@@ -1767,7 +1767,7 @@ async function claudeCall(prompt, systemPrompt, imageB64, imageMime){
   }
 
   var body = {
-    model: imageB64 ? "claude-3-5-sonnet-20241022" : "claude-3-5-haiku-20241022",
+    model: imageB64 ? "claude-haiku-4-5-20251001" : "claude-haiku-4-5-20251001",
     max_tokens: 3000,
     messages: [{role:"user", content:userContent}]
   };
