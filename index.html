@@ -1744,7 +1744,7 @@ async function testClaude(){
         "anthropic-version":"2023-06-01",
         "anthropic-dangerous-direct-browser-access":"true"
       },
-      body:JSON.stringify({model:"claude-3-5-haiku-20241022",max_tokens:10,messages:[{role:"user",content:"Zeg OK"}]})
+      body:JSON.stringify({model:"claude-3-5-sonnet-20241022",max_tokens:10,messages:[{role:"user",content:"Zeg OK"}]})
     });
     var d = await res.json();
     if(res.ok){ st.className="st-ok"; st.textContent="\u2713 Verbinding OK! Claude werkt."; }
